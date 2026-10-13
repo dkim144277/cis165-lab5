@@ -34,13 +34,11 @@ int main()
     
     // set 2 decimals for formatting money and print everything
     cout << fixed << setprecision(2);
-    
-    cout << "Your interest rate: " << right << setw(10) << percent_rate << "%\n";
-    cout << "# of times compounded: " << right << setw(10) << 
-                                static_cast<int>(times_compounded) << " times\n";
-    cout << "Principal: " << right << setw(10) << "$" << principal << "\n";
-    cout << "Interest earned: " << right << setw(10) << "$" << interest_earned << "\n";
-    cout << "Total amount saved: " << right << setw(10) << "$" << amount;
 
+    cout << left << setw(25) << "Your interest rate:" << right << setw(10) << percent_rate << "%\n";
+    cout << left << setw(25) << "# of times compounded:" << right << setw(10) << static_cast<int>(times_compounded) << " times\n";
+    cout << left << setw(25) << "Principal:" << right << " $" << setw(9) << principal << "\n";
+    cout << left << setw(25) << "Interest earned:" << right << " $" << setw(9) << interest_earned << "\n";
+    cout << left << setw(25) << "Total amount saved:" << right << " $" << setw(9) << amount << "\n";
     return 0;
 }
